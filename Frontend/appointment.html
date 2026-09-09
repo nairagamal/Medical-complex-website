@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز موعد | مركز ميديكير</title>
+    <!-- Bootstrap CSS RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Changa:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+     <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/appointment.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+ 
+</head>
+<body>
+   
+    
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="مركز ميديكير" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">من نحن</a>
+                    </li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    الخدمات
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+    <li><a class="dropdown-item" href="lab-tests.html">التحاليل والمختبر</a></li>
+    <li><a class="dropdown-item" href="radiology.html">الأشعة والتصوير الطبي</a></li>
+    <li><a class="dropdown-item" href="physiotherapy.html">العلاج الطبيعي وإعادة التأهيل</a></li>
+    <li><a class="dropdown-item" href="nursing.html">قسم التمريض</a></li>
+    <li><a class="dropdown-item" href="sterilization.html">قسم التعقيم الطبي</a></li>
+    <li><a class="dropdown-item" href="ambulance.html">قسم الإسعاف</a></li>
+  </ul>
+</li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="departments.html">العيادات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">أطباؤنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الأسئلة الشائعة</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="carrers.html">الوظائف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary me-lg-3">حجز موعد</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Appointment Section -->
+    <section class="appointment-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="appointment-form">
+                        <div class="section-header">
+                            <span class="subtitle">ابدأ الآن</span>
+                            <h2>حدد موعدك</h2>
+                            <div class="divider"></div>
+                            <p>املأ النموذج أدناه لطلب موعد. سيتصل بك فريقنا لتأكيد الحجز.</p>
+                        </div>
+
+                        <form id="appointmentForm" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="fullName" class="form-label">الاسم الكامل *</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                    <div class="invalid-feedback">
+                                        يرجى إدخال الاسم الكامل.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phoneNumber" class="form-label">رقم الهاتف *</label>
+                                    <input type="tel" class="form-control" id="phoneNumber" required>
+                                    <div class="invalid-feedback">
+                                        يرجى إدخال رقم هاتف صحيح.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">البريد الإلكتروني *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">
+                                        يرجى إدخال بريد إلكتروني صحيح.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="department" class="form-label">القسم *</label>
+                                    <select class="form-select" id="department" required>
+                                        <option value="" selected disabled>اختر القسم</option>
+                                        <!-- Will be populated by JavaScript -->
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        يرجى اختيار قسم.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="preferredDate" class="form-label">التاريخ المفضل *</label>
+                                    <input type="date" class="form-control" id="preferredDate" min="" required>
+                                    <div class="invalid-feedback">
+                                        يرجى اختيار تاريخ في المستقبل.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="message" class="form-label">معلومات إضافية</label>
+                                    <textarea class="form-control" id="message" rows="3"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="terms" required>
+                                        <label class="form-check-label" for="terms">
+                                            أوافق على <a href="privacy.html">الشروط والأحكام</a> و <a href="privacy.html">سياسة الخصوصية</a> *
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            يجب الموافقة قبل الإرسال.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                                        <span id="submitText">حجز الموعد</span>
+                                        <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="appointment-info">
+                        <div class="info-card">
+                            <h3><i class="fas fa-info-circle"></i> معلومات الموعد</h3>
+                            <ul>
+                                <li><strong>ساعات العمل:</strong> من الاثنين إلى الجمعة: 8:00 صباحًا - 8:00 مساءً<br>السبت: 9:00 صباحًا - 5:00 مساءً</li>
+                                <li><strong>الطوارئ:</strong> متاحة على مدار الساعة</li>
+                                <li><strong>الهاتف:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                                <li><strong>البريد الإلكتروني:</strong> <a href="mailto:appointments@medicare.com">appointments@medicare.com</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3><i class="fas fa-question-circle"></i> ما يجب إحضاره</h3>
+                            <ul>
+                                <li>بطاقة الهوية</li>
+                                <li>بطاقة التأمين (إن وجدت)</li>
+                                <li>قائمة الأدوية الحالية</li>
+                                <li>السجلات الطبية (للمرضى الجدد)</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3><i class="fas fa-clock"></i> مواعيد في نفس اليوم</h3>
+                            <p>نقدم مواعيد محدودة في نفس اليوم للحالات العاجلة. يرجى الاتصال بمكتبنا للتحقق من التوفر.</p>
+                            <a href="tel:+1234567890" class="btn btn-outline-primary">اتصل للتحقق من التوفر</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">تأكيد الموعد</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-check-circle text-success" style="font-size: 4rem;"></i>
+                        </div>
+                        <h4 class="mb-3">شكرًا لك!</h4>
+                        <p>تم تقديم طلب الموعد بنجاح.</p>
+                        <p>سنتصل بك قريبًا لتأكيد الحجز.</p>
+                        <div class="appointment-details mt-4 p-3 bg-light rounded">
+                            <p class="mb-1"><strong>الاسم:</strong> <span id="confirmName"></span></p>
+                            <p class="mb-1"><strong>القسم:</strong> <span id="confirmDepartment"></span></p>
+                            <p class="mb-1"><strong>التاريخ:</strong> <span id="confirmDate"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-brand">
+                                <img src="images/logo.png" alt="مركز ميديكير" class="footer-logo">
+                                <span class="brand-name">مركز ميديكير</span>
+                            </div>
+                            <p class="footer-about">نقدم خدمات رعاية صحية استثنائية مع التعاطف وأحدث التقنيات منذ عام 1998. صحتك هي أولويتنا.</p>
+                            <div class="footer-newsletter">
+                                <h4>اشترك في نشرتنا البريدية</h4>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="عنوان بريدك الإلكتروني" required>
+                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">روابط سريعة</h4>
+                            <ul class="footer-links">
+                                <li><a href="index.html">الرئيسية</a></li>
+                                <li><a href="about.html">من نحن</a></li>
+                                <li><a href="services.html">الخدمات</a></li>
+                                <li><a href="doctors.html">أطباؤنا</a></li>
+                                <li><a href="blog.html">مدونة الصحة</a></li>
+                                <li><a href="contact.html">اتصل بنا</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">الأقسام الطبية</h4>
+                            <ul class="footer-links">
+                                <li><a href="departments.html#cardiology">أمراض القلب</a></li>
+                                <li><a href="departments.html#neurology">الأعصاب</a></li>
+                                <li><a href="departments.html#orthopedics">العظام</a></li>
+                                <li><a href="departments.html#pediatrics">طب الأطفال</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">معلومات الاتصال</h4>
+                            <div class="footer-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>123 شارع طبي، مدينة الصحة، HC 12345</p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <p>الطوارئ: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>المواعيد: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <p>من الاثنين إلى الجمعة: 8:00 صباحًا - 7:00 مساءً</p>
+                                    <p>السبت والأحد: 9:00 صباحًا - 5:00 مساءً</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">© 2025 مركز ميديكير. جميع الحقوق محفوظة.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-legal">
+                            <a href="privacy.html">سياسة الخصوصية</a>
+                            <a href="terms.html">شروط الخدمة</a>
+                            <a href="sitemap.html">خريطة الموقع</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // API Base URL - Update this to match your API endpoint
+            const API_BASE_URL = 'https://localhost:7230/api';
+            
+            // DOM Elements
+            const form = document.getElementById('appointmentForm');
+            const departmentSelect = document.getElementById('department');
+            const preferredDateInput = document.getElementById('preferredDate');
+            const submitBtn = document.getElementById('submitBtn');
+            const submitText = document.getElementById('submitText');
+            const spinner = document.getElementById('spinner');
+            const confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+            
+            // Set minimum date for the date picker (today)
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            preferredDateInput.min = tomorrow.toISOString().split('T')[0];
+            
+            // Load departments from API
+            async function loadDepartments() {
+                try {
+                    const response = await fetch(`${API_BASE_URL}/departments`);
+                    if (!response.ok) {
+                        throw new Error('فشل تحميل الأقسام');
+                    }
+                    const departments = await response.json();
+                    
+                    // Clear existing options
+                    departmentSelect.innerHTML = '<option value="" selected disabled>اختر القسم</option>';
+                    
+                    // Add departments to select
+                    departments.forEach(dept => {
+                        const option = document.createElement('option');
+                        option.value = dept.id;
+                        option.textContent = dept.name;
+                        departmentSelect.appendChild(option);
+                    });
+                } catch (error) {
+                    console.error('Error loading departments:', error);
+                    showAlert('فشل تحميل الأقسام. يرجى المحاولة لاحقًا.', 'danger');
+                }
+            }
+            
+            // Form submission handler
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Validate form
+                if (!form.checkValidity()) {
+                    e.stopPropagation();
+                    form.classList.add('was-validated');
+                    return;
+                }
+                
+                // Prepare form data
+                const formData = {
+                    fullName: document.getElementById('fullName').value,
+                    phoneNumber: document.getElementById('phoneNumber').value,
+                    email: document.getElementById('email').value,
+                    departmentId: parseInt(departmentSelect.value),
+                    preferredDate: document.getElementById('preferredDate').value,
+                    message: document.getElementById('message').value
+                };
+                
+                // Show loading state
+                submitBtn.disabled = true;
+                submitText.textContent = 'جاري المعالجة...';
+                spinner.classList.remove('d-none');
+                
+                try {
+                    // Send data to API
+                    const response = await fetch(`${API_BASE_URL}/bookings`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+                    
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(errorData.message || 'فشل حجز الموعد');
+                    }
+                    
+                    const bookingData = await response.json();
+                    
+                    // Show success message
+                    showConfirmation(bookingData);
+                    
+                    // Reset form
+                    form.reset();
+                    form.classList.remove('was-validated');
+                    
+                } catch (error) {
+                    console.error('Booking error:', error);
+                    showAlert(error.message || 'حدث خطأ أثناء حجز الموعد. يرجى المحاولة مرة أخرى.', 'danger');
+                } finally {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    submitText.textContent = 'حجز الموعد';
+                    spinner.classList.add('d-none');
+                }
+            });
+            
+            // Show confirmation modal with booking details
+            function showConfirmation(bookingData) {
+                // Format the date for display
+                const formattedDate = new Date(bookingData.preferredDate).toLocaleDateString('ar-EG', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                
+                // Update modal with booking details
+                document.getElementById('confirmName').textContent = bookingData.fullName;
+                document.getElementById('confirmDepartment').textContent = departmentSelect.options[departmentSelect.selectedIndex].text;
+                document.getElementById('confirmDate').textContent = formattedDate;
+                
+                // Show modal
+                confirmationModal.show();
+            }
+            
+            // Show alert message
+            function showAlert(message, type) {
+                // Remove any existing alerts
+                const existingAlert = document.querySelector('.alert');
+                if (existingAlert) {
+                    existingAlert.remove();
+                }
+                
+                // Create alert element
+                const alertDiv = document.createElement('div');
+                alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+                alertDiv.setAttribute('role', 'alert');
+                alertDiv.innerHTML = `
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `;
+                
+                // Insert alert before form
+                form.parentNode.insertBefore(alertDiv, form);
+                
+                // Auto-dismiss after 5 seconds
+                setTimeout(() => {
+                    const bsAlert = new bootstrap.Alert(alertDiv);
+                    bsAlert.close();
+                }, 5000);
+            }
+            
+            // Initialize page
+            loadDepartments();
+            
+            // Back to top button
+            const backToTopButton = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('active');
+                } else {
+                    backToTopButton.classList.remove('active');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

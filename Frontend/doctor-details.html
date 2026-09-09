@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="خدمات صحية متميزة مع أطباء عالميين ومرافق حديثة">
+    
+     <!-- Bootstrap CSS RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Changa:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+     <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/doctor-details.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>ملف الطبيب | مركز ميديكير</title>
+    
+ 
+</head>
+<body>
+    
+    
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="مركز ميديكير" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">من نحن</a>
+                    </li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    الخدمات
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+    <li><a class="dropdown-item" href="lab-tests.html">التحاليل والمختبر</a></li>
+    <li><a class="dropdown-item" href="radiology.html">الأشعة والتصوير الطبي</a></li>
+    <li><a class="dropdown-item" href="physiotherapy.html">العلاج الطبيعي وإعادة التأهيل</a></li>
+    <li><a class="dropdown-item" href="nursing.html">قسم التمريض</a></li>
+    <li><a class="dropdown-item" href="sterilization.html">قسم التعقيم الطبي</a></li>
+    <li><a class="dropdown-item" href="ambulance.html">قسم الإسعاف</a></li>
+  </ul>
+</li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="departments.html">العيادات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="doctors.html">أطباؤنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الأسئلة الشائعة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrers.html">الوظائف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary me-lg-3">حجز موعد</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Page Header -->
+    <section class="page-header bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                            <li class="breadcrumb-item"><a href="doctors.html">أطباؤنا</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">ملف الطبيب</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Details Section -->
+    <section class="py-5">
+        <div class="container">
+            <div id="doctor-details">
+                <!-- Loading spinner -->
+                <div class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">جار التحميل...</span>
+                    </div>
+                    <p class="mt-2">جار تحميل بيانات الطبيب...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+ <footer class="footer">
+    <div class="footer-main">
+        <div class="container">
+            <div class="row g-4">
+                <!-- About Column -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="footer-brand">
+                            <img src="images/logo.png" alt="مركز ميديكير" class="footer-logo">
+                            <span class="brand-name">مركز ميديكير</span>
+                        </div>
+                        <p class="footer-about">نقدم خدمات صحية استثنائية برعاية وتقنيات حديثة منذ عام 1998. صحتك هي أولويتنا.</p>
+                        <div class="footer-newsletter">
+                            <h4>اشترك في نشرتنا البريدية</h4>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="بريدك الإلكتروني" required>
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">روابط سريعة</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="services.html">الخدمات</a></li>
+                            <li><a href="doctors.html">أطباؤنا</a></li>
+                            <li><a href="blog.html">المدونة الصحية</a></li>
+                            <li><a href="contact.html">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Departments Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">الأقسام الطبية</h4>
+                        <ul class="footer-links">
+                            <li><a href="departments.html#cardiology">أمراض القلب</a></li>
+                            <li><a href="departments.html#neurology">الأعصاب</a></li>
+                            <li><a href="departments.html#orthopedics">العظام</a></li>
+                            <li><a href="departments.html#pediatrics">طب الأطفال</a></li>
+                            <li><a href="departments.html#radiology">الأشعة</a></li>
+                            <li><a href="departments.html#surgery">الجراحة العامة</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">معلومات التواصل</h4>
+                        <div class="footer-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>123 شارع طبي، مدينة الصحة، 12345</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <p>الطوارئ: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                <p>الحجوزات: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <p>من الاثنين إلى الجمعة: 8 صباحاً - 7 مساءً</p>
+                                <p>السبت والأحد: 9 صباحاً - 5 مساءً</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">© 2025 مركز ميديكير. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-legal">
+                        <a href="privacy.html">سياسة الخصوصية</a>
+                        <a href="terms.html">شروط الخدمة</a>
+                        <a href="sitemap.html">خريطة الموقع</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</footer>
+    
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const apiBaseUrl = 'https://localhost:7230/api';
+    const urlParams = new URLSearchParams(window.location.search);
+    const doctorId = urlParams.get('id');
+    
+    if (!doctorId) {
+        window.location.href = 'doctors.html';
+        return;
+    }
+    
+    // Fetch doctor details
+    async function fetchDoctorDetails() {
+        try {
+            const response = await fetch(`${apiBaseUrl}/doctors/${doctorId}`);
+            if (!response.ok) throw new Error('Network response was not ok');
+            
+            const doctor = await response.json();
+            displayDoctorDetails(doctor);
+        } catch (error) {
+            console.error('Error fetching doctor details:', error);
+            document.getElementById('doctor-details').innerHTML = `
+                <div class="alert alert-danger">
+                    فشل تحميل بيانات الطبيب. يرجى المحاولة لاحقاً.
+                </div>
+            `;
+        }
+    }
+    
+    // Display doctor details
+    function displayDoctorDetails(doctor) {
+        const container = document.getElementById('doctor-details');
+        
+        container.innerHTML = `
+            <div class="row">
+                <!-- Doctor Image and Basic Info -->
+                <div class="col-lg-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="doctor-profile-img-container">
+                            <img src="https://localhost:7230${doctor.imagePath}" alt="د. ${doctor.name}" class="img-fluid rounded-top">
+                        </div>
+                        <div class="card-body text-center">
+                            <h2 class="h4">د. ${doctor.name}</h2>
+                            <p class="text-primary mb-2">${doctor.specialty}</p>
+                            <p class="text-muted">
+                                <i class="fas fa-clinic-medical me-1"></i> ${doctor.departmentName}
+                            </p>
+                            
+                            <div class="rating-display my-3">
+                                ${renderStarRating(doctor.averageRating || 0)}
+                                <span class="ms-2">${doctor.averageRating ? doctor.averageRating.toFixed(1) : 'لا يوجد'} (${doctor.reviewCount || 0} تقييمات)</span>
+                            </div>
+                            
+                            <hr>
+                            
+                            <div class="d-grid gap-2">
+                                <a href="appointment.html?doctor=${doctor.id}" 
+                                   class="btn btn-primary">
+                                    حجز موعد
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                    
+                    <!-- Availability Section -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header bg-light">
+                            <h3 class="h6 mb-0">مواعيد العمل</h3>
+                        </div>
+                        <div class="card-body">
+                            ${displayDoctorAvailabilities(doctor.availabilities)}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Doctor Details -->
+                <div class="col-lg-8">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header bg-light">
+                            <h3 class="h6 mb-0">عن د. ${doctor.name.split(' ')[0]}</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>${doctor.bio || 'لا تتوفر سيرة ذاتية.'}</p>
+                            
+                            ${doctor.specialty ? `
+                            <h4 class="h5 mt-4">التخصصات</h4>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border">${doctor.specialty}</span>
+                            </div>
+                            ` : ''}
+                            
+                            <h4 class="h5 mt-4">الخبرة</h4>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-point"></div>
+                                    <div class="timeline-content">
+                                        <h5>استشاري ${doctor.specialty}</h5>
+                                        <p class="text-muted small">مركز ميديكير (حتى الآن)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Patient Reviews Section -->
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-light">
+                            <h3 class="h6 mb-0">تقييمات المرضى</h3>
+                        </div>
+                        <div class="card-body">
+                            <!-- Review Form -->
+                    
+<!-- Review Form -->
+<div id="reviewForm">
+    <h4 class="h5 mb-3">أضف تقييمك</h4>
+    <form id="submitReviewForm">
+        <input type="hidden" name="doctorId" value="${doctor.id}">
+        <div class="mb-3">
+            <label for="visitorName" class="form-label">اسمك</label>
+            <input type="text" class="form-control" id="visitorName" name="visitorName" required>
+        </div>
+        <div class="mb-3">
+            <label for="visitorEmail" class="form-label">بريدك الإلكتروني</label>
+            <input type="email" class="form-control" id="visitorEmail" name="visitorEmail" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">التقييم</label>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5" class="star"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" class="star"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" class="star"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" class="star"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" class="star"><i class="fas fa-star"></i></label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="content" class="form-label">تقييمك</label>
+            <textarea class="form-control" id="content" name="content" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">إرسال التقييم</button>
+    </form>
+</div>
+
+                            
+                            <!-- Reviews Container -->
+                            <div id="reviews-container">
+                                ${displayDoctorReviews(doctor.reviews)}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        setupReviewCycling(doctor.reviews);
+        // Add event listener for review form submission
+        document.getElementById('submitReviewForm')?.addEventListener('submit', handleReviewSubmit);
+    }
+    
+ // Display doctor reviews - updated to show one at a time
+function displayDoctorReviews(reviews) {
+    if (!reviews || reviews.length === 0) {
+        return `
+            <div class="alert alert-info">
+                لا توجد تقييمات بعد. كن أول من يقيم هذا الطبيب!
+            </div>
+        `;
+    }
+    
+    let html = `
+        <div class="d-flex align-items-center mb-3">
+            <div class="rating-display">
+                <span>${reviews.length} ${reviews.length === 1 ? 'تقييم' : 'تقييمات'}</span>
+            </div>
+        </div>
+        <div id="current-review-container">
+            ${renderSingleReview(reviews[0], 0, reviews.length)}
+        </div>
+    `;
+    
+    if (reviews.length > 1) {
+        html += `
+            <div class="text-center mt-3">
+                <button id="next-review-btn" class="btn btn-outline-primary" 
+                        data-current-index="0" data-total-reviews="${reviews.length}">
+                    عرض التالي <i class="fas fa-arrow-left ms-2"></i>
+                </button>
+            </div>
+        `;
+    }
+    
+    return html;
+}
+
+
+// Render a single review
+function renderSingleReview(review, currentIndex, totalReviews) {
+    return `
+        <div class="review-item">
+            <div class="d-flex justify-content-between mb-2">
+                <h5 class="mb-0">${review.visitorName}</h5>
+                <small class="text-muted">${formatDate(review.createdAt)}</small>
+            </div>
+            <div class="rating mb-2">
+                ${renderExactStarRating(review.rating)}
+            </div>
+            <p>${review.content}</p>
+            <div class="text-muted small text-end">
+                ${currentIndex + 1} من ${totalReviews}
+            </div>
+        </div>
+    `;
+}
+
+// Helper function to render exact star rating (no half stars)
+function renderExactStarRating(rating) {
+    let stars = '';
+    const fullStars = Math.floor(rating);
+    
+    for (let i = 1; i <= 5; i++) {
+        if (i <= fullStars) {
+            stars += '<i class="fas fa-star star-rating"></i>';
+        } else {
+            stars += '<i class="far fa-star star-rating empty-star"></i>';
+        }
+    }
+    
+    return stars;
+}
+
+// Add event listener for the next review button
+function setupReviewCycling(reviews) {
+    const nextReviewBtn = document.getElementById('next-review-btn');
+    if (nextReviewBtn) {
+        nextReviewBtn.addEventListener('click', function() {
+            const currentIndex = parseInt(this.getAttribute('data-current-index'));
+            const totalReviews = parseInt(this.getAttribute('data-total-reviews'));
+            const nextIndex = (currentIndex + 1) % totalReviews;
+            
+            document.getElementById('current-review-container').innerHTML = 
+                renderSingleReview(reviews[nextIndex], nextIndex, totalReviews);
+            
+            this.setAttribute('data-current-index', nextIndex);
+            
+            // Update button text if we're at the last review
+            if (nextIndex === totalReviews - 1) {
+                this.innerHTML = 'عرض الأول <i class="fas fa-arrow-left ms-2"></i>';
+            } else {
+                this.innerHTML = 'عرض التالي <i class="fas fa-arrow-left ms-2"></i>';
+            }
+        });
+    }
+}
+
+    // Display doctor availabilities
+    function displayDoctorAvailabilities(availabilities) {
+        if (!availabilities || availabilities.length === 0) {
+            return `
+                <div class="alert alert-info">
+                    لا توجد مواعيد متاحة حالياً.
+                </div>
+            `;
+        }
+        
+        // Group availabilities by day
+        const days = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
+        const groupedAvailabilities = {};
+        
+        availabilities.forEach(avail => {
+            if (!groupedAvailabilities[avail.dayOfWeek]) {
+                groupedAvailabilities[avail.dayOfWeek] = [];
+            }
+            groupedAvailabilities[avail.dayOfWeek].push(avail);
+        });
+        
+        let html = '<ul class="list-unstyled">';
+        
+        // Sort days by their order (0=Sunday to 6=Saturday)
+        Object.keys(groupedAvailabilities)
+            .sort((a, b) => parseInt(a) - parseInt(b))
+            .forEach(dayIndex => {
+                const dayName = days[parseInt(dayIndex)];
+                const dayAvailabilities = groupedAvailabilities[dayIndex];
+                
+                html += `<li class="mb-2"><strong>${dayName}:</strong> `;
+                
+                const timeSlots = dayAvailabilities.map(avail => {
+                    return `${avail.startTime} - ${avail.endTime}`;
+                });
+                
+                html += timeSlots.join('، ') + '</li>';
+            });
+        
+        html += '</ul>';
+        return html;
+    }
+    
+    // Handle review form submission
+  async function handleReviewSubmit(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    const reviewData = {
+        DoctorId: parseInt(formData.get('doctorId')),
+        VisitorName: formData.get('visitorName'),
+        VisitorEmail: formData.get('visitorEmail'),
+        Rating: parseInt(formData.get('rating')),
+        Content: formData.get('content')
+    };
+    
+    // Validate minimum content length
+    if (reviewData.Content.length < 10) {
+        alert('يجب أن يحتوي التقييم على الأقل 10 أحرف');
+        return;
+    }
+    
+    try {
+        const response = await fetch(`${apiBaseUrl}/reviews`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(reviewData)
+        });
+        
+        if (!response.ok) {
+            const errorData = await response.json();
+            // Show validation errors if available
+            if (errorData.errors) {
+                const errorMessages = Object.values(errorData.errors).flat().join('\n');
+                throw new Error(errorMessages);
+            }
+            throw new Error(errorData.message || 'Failed to submit review');
+        }
+        
+        const result = await response.json();
+        alert('شكراً لتقييمك! تم إضافة التقييم بنجاح.');
+        form.reset();
+        fetchDoctorDetails(); // Refresh doctor details
+    } catch (error) {
+        console.error('Error submitting review:', error);
+        alert(`فشل إرسال التقييم:\n${error.message}`);
+    }
+}
+    // Helper function to render star rating
+    function renderStarRating(rating) {
+        let stars = '';
+        const fullStars = Math.floor(rating);
+        const hasHalfStar = rating % 1 >= 0.5;
+        
+        for (let i = 1; i <= 5; i++) {
+            if (i <= fullStars) {
+                stars += '<i class="fas fa-star star-rating"></i>';
+            } else if (i === fullStars + 1 && hasHalfStar) {
+                stars += '<i class="fas fa-star-half-alt star-rating"></i>';
+            } else {
+                stars += '<i class="far fa-star star-rating empty-star"></i>';
+            }
+        }
+        
+        return stars;
+    }
+    
+    // Helper function to format date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        const now = new Date();
+        const diffInDays = Math.floor((now - date) / (1000 * 60 * 60 * 24));
+        
+        if (diffInDays === 0) return 'اليوم';
+        if (diffInDays === 1) return 'أمس';
+        if (diffInDays < 7) return `منذ ${diffInDays} أيام`;
+        if (diffInDays < 30) return `منذ ${Math.floor(diffInDays / 7)} أسابيع`;
+        if (diffInDays < 365) return `منذ ${Math.floor(diffInDays / 30)} أشهر`;
+        return `منذ ${Math.floor(diffInDays / 365)} سنوات`;
+    }
+    
+    // Initialize
+    fetchDoctorDetails();
+});
+   </script>
+</body>
+</html>
